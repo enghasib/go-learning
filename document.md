@@ -381,3 +381,65 @@ Concurrency is the ability of a program to execute multiple tasks simultaneously
 # Concurrency and Parallelism:
 
 - Concurrency and parallelism are related but distinct concepts. Concurrency refers to the ability of a program to execute multiple tasks simultaneously, while parallelism refers to the execution of multiple tasks at the same time on multiple processors. Go's concurrency features are designed to make it easy to write concurrent programs, but they do not automatically parallelize tasks. To achieve parallelism, you need to use Go's built-in parallelism features , such as the `goroutine` and `channel` types.
+
+# Thread:
+
+# Go Datatype:
+
+Go datatype:
+
+- Int
+- Float
+- String
+- Boolean
+
+## Numerical Datatype:
+
+### Singed Integer
+
+To print decimal number in signed integer we use`"%d"`
+
+| Type  | Bit | Byte | Note                              |
+| ----- | --- | ---- | --------------------------------- |
+| int   | -   | 4    | Depend on the system architecture |
+| int8  | 8   | 1    | Store 8-bit signed integer        |
+| int16 | 16  | 2    | Store 16-bit signed integer       |
+| int32 | 32  | 4    | Store 32-bit signed integer       |
+| int64 | 64  | 8    | Store 64-bit signed integer       |
+
+### Unsigned Integer
+
+Unsigned integer is a number that is always positive..Go has following unsigned integer types:
+| Type | Bit | Byte | Note |
+| ------ | --- | ---- | --------------------------------- |
+| uint | - | 4 | Depend on the system architecture |
+| uint8 | 8 | 1 | Store 8-bit unsigned integer |
+| uint16 | 16 | 2 | Store 16-bit unsigned integer |
+| uint32 | 32 | 4 | Store 32-bit unsigned integer |
+| uint64 | 64 | 8 | Store 64-bit unsigned integer |
+
+### Float
+
+To print floating point number we use`"%f"` and specify the precision using `%.xf` where x is the number of digits after the decimal point.
+| Type | Bit | Byte | Note |
+| ------- | --- | ---- | ---------------------------------- |
+| float32 | 32 | 4 | Store 32-bit floating point number |
+| float64 | 64 | 8 | Store 64-bit floating point number |
+
+### Byte
+
+Alias for unsigned `unit8` type
+| Type | Bit | Byte | Note |
+| --- | --- | --- | ---------------------------------- |
+| byte | 8 | 1 | Store 8-bit unsigned integer |
+
+## Rune
+
+Rune is a `int32`-bit `Unicode` code point. It is used to represent a single `Unicode` character. Print flag is `"%c"`.
+
+## Boolean Datatype
+
+To print boolean value we use `"%v"`. It prints `true` or `false`.
+| Type | Bit | Byte | Note |
+| ---- | --- | ---- | ------------------- |
+| bool | 1 | 8 | Boolean type are store as 8-bit integer |
