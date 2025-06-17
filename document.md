@@ -60,6 +60,31 @@ fmt.Println("x is zero")
 
 ```
 
+# [Loop](https://go.dev/doc/effective_go#for "visit the official Go documentation for more information on loops")
+
+Loops in Go are used to execute a block of code repeatedly for a specified number of times or until a certain condition is met. They can be implemented using the `for` statements only.
+
+```go
+// Like a C for
+for init; condition; post { }
+
+// Like a C while
+for condition { }
+
+// Like a C for(;;)
+for { }
+ // short declaration
+sum := 0
+for i := 0; i < 10; i++ {
+    sum += i
+}
+
+// with range clause
+for key, value := range oldMap {
+    newMap[key] = value
+}
+```
+
 # Function
 
 <p style='text-align: justify;'> In Go, functions are defined using the `func` keyword, followed by the function name, parameters in parentheses, and an optional return type. They allow you to encapsulate logic and can be called multiple times with different arguments to perform tasks efficiently.Functions in Go are blocks of code that perform a specific task and can be reused throughout your program. They are defined using the `func` keyword followed by the function name, parameters, and return type.</p>
@@ -280,7 +305,7 @@ type Person struct {
     var myArray [5] int; // example
 
     // another type of array
-    var myArray2 := [5]int{1, 2, 3, 4 , 5}
+    myArray2 := [5]int{1, 2, 3, 4 , 5}
 
 ```
 
