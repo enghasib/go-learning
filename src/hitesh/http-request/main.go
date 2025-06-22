@@ -4,13 +4,15 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"net/url"
 	"strings"
 )
 
 func main() {
 	fmt.Println("Simple get request using http package in go")
 	// CreateGetReq()
-	CreatePostReq()
+	// CreatePostReq()
+	PerformPostJsonRequest()
 }
 
 func CreateGetReq() {
@@ -58,4 +60,27 @@ func CreatePostReq() {
 
 	fmt.Println("The response is: ", string(content))
 
+}
+
+func PerformPostJsonRequest() {
+	myUrl := "http://localhost:5000/postForm"
+
+	data := url.Values{}
+	data.Add("firstName", "Al")
+	data.Add("lastName", "Hasib")
+	data.Add("age", "25")
+	data.Add("email", "hasib@gmail.com")
+
+	//make a request
+	res, err := http.PostForm(myUrl, data)
+	if err != nil {
+		panic(err)
+	}
+	defer res.Body.Close()
+
+	content, err := io.ReadAll(res.Body)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("The response body is: ", string(content))
 }
