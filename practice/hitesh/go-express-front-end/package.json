@@ -1,0 +1,15 @@
+{
+  "name": "go-express-front-end",
+  "packageManager": "yarn@4.6.0",
+  "dependencies": {
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
